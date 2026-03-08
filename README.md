@@ -41,7 +41,7 @@ Just open `index.html` in your browser.
 5. Save.
 
 Your site will appear at:
-`https://yourusername.github.io/repository-name/`
+https://salim-shady71.github.io/cow/
 
 ## Note
 Progress is saved in the browser using localStorage.
