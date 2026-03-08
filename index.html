@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Shreya's Analytics Quest</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Fredoka:wght@500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-blobs">
+    <span class="blob blob-1"></span>
+    <span class="blob blob-2"></span>
+    <span class="blob blob-3"></span>
+  </div>
+
+  <header class="topbar">
+    <div class="brand">
+      <div class="mascot">🥕</div>
+      <div>
+        <p class="eyebrow">Professor Carrot presents</p>
+        <h1>Shreya’s Analytics Quest</h1>
+      </div>
+    </div>
+    <button class="pill" id="resetProgressBtn">Reset Progress</button>
+  </header>
+
+  <main class="shell">
+    <aside class="sidebar">
+      <div class="player-card card soft">
+        <p class="tiny-label">PLAYER</p>
+        <h2 id="playerName">Shreya</h2>
+        <div class="level-chip"><span>Current Level</span><strong id="currentLevelLabel">Level 1</strong></div>
+        <div class="progress-wrap">
+          <div class="progress-header">
+            <span>Quest Progress</span>
+            <span id="progressText">0 / 30</span>
+          </div>
+          <div class="progress-bar"><div id="progressFill"></div></div>
+        </div>
+        <div class="xp-box">
+          <div><p class="tiny-label">XP</p><h3 id="xpValue">0</h3></div>
+          <div><p class="tiny-label">Rewards</p><h3 id="rewardsValue">0</h3></div>
+        </div>
+      </div>
+
+      <nav class="nav card soft">
+        <button class="nav-btn active" data-view="dashboard">🎮 Dashboard</button>
+        <button class="nav-btn" data-view="today">📜 Today's Quest</button>
+        <button class="nav-btn" data-view="map">🗺 Quest Map</button>
+        <button class="nav-btn" data-view="achievements">🏆 Achievements</button>
+        <button class="nav-btn" data-view="projects">📚 Projects</button>
+        <button class="nav-btn" data-view="howto">🛠 Update Guide</button>
+      </nav>
+
+      <div class="card tip-box">
+        <div class="tip-title">🥕 Professor Carrot Tip</div>
+        <p id="globalTip"></p>
+      </div>
+    </aside>
+
+    <section class="content">
+      <section class="view active" id="dashboardView">
+        <div class="hero card gradient">
+          <div>
+            <p class="eyebrow">Daily adventure</p>
+            <h2 id="dashboardGreeting">Welcome back, analyst.</h2>
+            <p class="hero-copy" id="dashboardSummary"></p>
+            <div class="hero-stats">
+              <div class="mini-stat"><span>Day</span><strong id="heroDay"></strong></div>
+              <div class="mini-stat"><span>Reward</span><strong id="heroRewardState"></strong></div>
+              <div class="mini-stat"><span>XP Reward</span><strong id="heroXp"></strong></div>
+            </div>
+          </div>
+          <div class="hero-mascot">
+            <div class="mascot-card"><div class="mascot-big">🥕</div><p>Quest guide online</p></div>
+          </div>
+        </div>
+
+        <div class="dashboard-grid">
+          <div class="card">
+            <div class="section-head"><h3>💌 Today's Message</h3><span class="tag">From You</span></div>
+            <p id="dailyMessage"></p>
+          </div>
+
+          <div class="card">
+            <div class="section-head"><h3>🎁 Reward Chest</h3><span class="tag" id="rewardTag">Locked</span></div>
+            <div class="reward-card">
+              <p id="rewardPreview">Complete today’s quest to unlock the mystery reward.</p>
+              <button class="primary-btn" id="openRewardBtn" disabled>Open Reward Chest</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="section-head"><h3>🌸 Cozy Checkpoint</h3><span class="tag">Support Mode</span></div>
+          <p id="checkpointText"></p>
+        </div>
+      </section>
+
+      <section class="view" id="todayView">
+        <div class="card">
+          <div class="section-head"><h2 id="todayTitle">Today's Quest</h2><span class="tag" id="todayLevelTag"></span></div>
+          <p class="muted" id="todayMissionSubtitle"></p>
+
+          <div class="mission-grid">
+            <div class="mini-card"><h4>🎯 Objective</h4><p id="todayObjective"></p></div>
+            <div class="mini-card"><h4>🧰 Tools</h4><ul id="toolsList" class="icon-list"></ul></div>
+            <div class="mini-card"><h4>📦 Dataset</h4><p id="datasetText"></p><a id="datasetLink" target="_blank" rel="noopener">Open dataset source</a></div>
+            <div class="mini-card"><h4>⭐ Reward</h4><p id="xpText"></p></div>
+          </div>
+
+          <div class="quest-columns">
+            <div class="mini-card large"><h4>🪜 Steps</h4><ol id="stepsList"></ol></div>
+            <div class="mini-card large"><h4>📊 Expected Output</h4><ul id="outputList"></ul></div>
+          </div>
+
+          <div class="quest-columns">
+            <div class="mini-card large">
+              <div class="section-head compact"><h4>🔓 Unlockable Hint</h4><button class="secondary-btn" id="toggleHintBtn">Show Hint</button></div>
+              <p id="hintText" class="hidden-box"></p>
+            </div>
+            <div class="mini-card large"><h4>🥕 Professor Carrot says</h4><p id="todayTip"></p></div>
+          </div>
+
+          <div class="mini-card large"><h4>🧠 Reflection Prompt</h4><p id="reflectionText"></p></div>
+
+          <div class="cta-row">
+            <button class="primary-btn" id="completeQuestBtn">Complete Today’s Quest</button>
+            <button class="secondary-btn" id="goRewardBtn" disabled>Go to Reward Chest</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="view" id="mapView">
+        <div class="card">
+          <div class="section-head"><h2>🗺 Quest Map</h2><span class="tag">30-Day Journey</span></div>
+          <div id="levelMap" class="level-map"></div>
+        </div>
+      </section>
+
+      <section class="view" id="achievementsView">
+        <div class="card">
+          <div class="section-head"><h2>🏆 Achievements</h2><span class="tag">Unlock as you go</span></div>
+          <div id="achievementGrid" class="achievement-grid"></div>
+        </div>
+      </section>
+
+      <section class="view" id="projectsView">
+        <div class="card">
+          <div class="section-head"><h2>📚 Project Realms</h2><span class="tag">Portfolio arc</span></div>
+          <div id="projectsGrid" class="projects-grid"></div>
+        </div>
+      </section>
+
+      <section class="view" id="howtoView">
+        <div class="card">
+          <div class="section-head"><h2>🛠 How You Update This Daily</h2><span class="tag">Admin-Friendly</span></div>
+          <div class="mini-card large"><h4>1. Open <code>content.js</code></h4><p>Edit the <strong>CURRENT_DAY</strong> object. Change the day number, title, message, task, reward, and hint whenever you want.</p></div>
+          <div class="mini-card large"><h4>2. Update the personal message</h4><p>The <strong>message</strong> field is your daily paragraph to her.</p></div>
+          <div class="mini-card large"><h4>3. Update the reward</h4><p>You control the reward text whenever you want.</p></div>
+          <div class="mini-card large"><h4>4. Upload to GitHub</h4><p>Commit the updated files and GitHub Pages will refresh the site.</p></div>
+          <div class="mini-card large"><h4>5. Local testing</h4><p>Just open <code>index.html</code>. Progress is saved in the browser with localStorage.</p></div>
+        </div>
+      </section>
+    </section>
+  </main>
+
+  <div class="toast" id="toast"></div>
+  <script src="content.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

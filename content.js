@@ -1,0 +1,62 @@
+const QUEST_CONFIG = {
+  playerName: "Shreya",
+  totalDays: 30,
+  globalTip: "U are the most capable person I know, I know rn it sounds like oh he is just saying that because he is dating me, but that is not it. I see something in u and its beautiful,just like who u are as a person. Lets nurture that and grow it together"
+};
+
+const LEVELS = [
+  { id: 1, name: "Level 1 — The Data Detective", days: [1,2,3,4,5,6], project: "Retail Demand & Seasonality Analysis" },
+  { id: 2, name: "Level 2 — Customer Intelligence", days: [7,8,9,10,11,12], project: "Customer Segmentation Using Machine Learning" },
+  { id: 3, name: "Level 3 — Predictive Intelligence", days: [13,14,15,16,17,18], project: "Customer Churn Prediction" },
+  { id: 4, name: "Level 4 — Strategy Architect", days: [19,20,21,22,23,24], project: "UK to UAE Market Expansion Decision Model" },
+  { id: 5, name: "Level 5 — Portfolio Champion", days: [25,26,27,28,29,30], project: "Professional Analytics Portfolio Build" }
+];
+
+const PROJECTS = [
+  { title: "Retail Demand & Seasonality Analysis", focus: "EDA, cleaning, decomposition, business insight", deliverables: ["Notebook","Charts","README with findings"], dataset: "UCI Online Retail / Walmart sales style retail data" },
+  { title: "Customer Segmentation", focus: "K-Means, hierarchical clustering, PCA, personas", deliverables: ["Cluster visuals","Customer personas","Marketing recommendations"], dataset: "Mall customers or retail-derived RFM dataset" },
+  { title: "Customer Churn Prediction", focus: "Logistic Regression, Random Forest, XGBoost, model comparison", deliverables: ["Model comparison notebook","Evaluation metrics","Business retention recommendations"], dataset: "IBM Telco Churn" },
+  { title: "Market Expansion Decision Model", focus: "Decision analytics, forecasting, strategic recommendation", deliverables: ["Notebook","Strategy summary","Decision framework"], dataset: "World Bank indicators + UAE market inputs" },
+  { title: "Portfolio Champion", focus: "GitHub curation, storytelling, employability presentation", deliverables: ["Pinned repos","Strong READMEs","Interview project summaries"], dataset: "All previous projects" }
+];
+
+const ACHIEVEMENTS = [
+  { id: "first-quest", icon: "🌱", title: "Quest Starter", description: "Complete your first mission.", unlockAtCompletedDays: 1 },
+  { id: "data-explorer", icon: "📊", title: "Data Explorer", description: "Complete 5 missions and start seeing patterns.", unlockAtCompletedDays: 5 },
+  { id: "insight-seeker", icon: "🧠", title: "Insight Seeker", description: "Complete 10 missions.", unlockAtCompletedDays: 10 },
+  { id: "prediction-mage", icon: "🤖", title: "Prediction Mage", description: "Complete 15 missions and enter modelling mode.", unlockAtCompletedDays: 15 },
+  { id: "strategy-architect", icon: "🏛️", title: "Strategy Architect", description: "Complete 22 missions and step into decision analytics.", unlockAtCompletedDays: 22 },
+  { id: "analytics-champion", icon: "🏆", title: "Analytics Champion", description: "Complete all 30 missions.", unlockAtCompletedDays: 30 }
+];
+
+// EDIT THIS OBJECT DAILY
+const CURRENT_DAY = {
+  day: 1,
+  level: "Level 1 — The Data Detective",
+  title: "Understand the Business Problem",
+  subtitle: "Begin the quest by understanding the real retail challenge before touching the code.",
+  objective: "Frame the business problem clearly: why does the retailer struggle with stockouts and overstock, and what questions should the analysis answer?",
+  tools: ["Notebook / Notion", "Python", "Pandas"],
+  datasetName: "UCI Online Retail Dataset",
+  datasetUrl: "https://archive.ics.uci.edu/ml/datasets/online+retail",
+  steps: [
+    "Read the business scenario and write a 4-6 sentence problem statement in your own words.",
+    "Visit the dataset source and inspect what fields are available.",
+    "Write down 3-5 business questions this analysis should answer.",
+    "Open a notebook and create a small setup section with imports and a project title.",
+    "Create a short note on what success for this project would look like."
+  ],
+  expectedOutput: [
+    "A short written problem statement",
+    "A list of business questions",
+    "A starter notebook with imports and project heading",
+    "A note describing what insights the company needs"
+  ],
+  hint: "Think like a manager, not just a coder. What decisions will this project help the business make?",
+  professorTip: "A project feels stronger in interviews when you can explain the business problem before you explain the code.",
+  reflection: "What would make this project feel useful to a real company instead of just looking like classwork?",
+  xpReward: 50,
+  message: "Hi, my dear kunji bb, lov u so much hug u so much. I wos think something like this would mek it more fun for u to learn these things, hence im try to make a game. I know the things u are capable of and I know there is a fear of not being good enough or something like that deep down that is causing u to maybe think like this, and I know u can overcome it with lil effort. This is to make learning this course lil fun for u. im make a cute lil carrot mascot for u and from now u shall coll him, Prof. Carrot coz he is here to help u learn these things, so it not seem like im try to teech u or anything. There are som rules, please don’t read ahead into the doc until and unless u are completed the previous level.",
+  checkpoint: "Today is about setting the tone. Slow, thoughtful work now will make every later step easier.",
+  reward: "Karaoke Night!!!!!!!!(ideally tonight or redeemable whenever u are want)"
+};
