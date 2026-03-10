@@ -31,44 +31,46 @@ const ACHIEVEMENTS = [
 
 // EDIT THIS OBJECT DAILY
 const CURRENT_DAY = {
-  day: 2,
+  day: 3,
   level: "Level 1 — The Data Detective",
-  title: "Explore the Dataset",
-  subtitle: "Before analysing anything, you must understand what the data actually contains.",
-  objective: "Load the retail dataset into Python and explore its structure, variables, and basic statistics to understand what information is available.",
+  title: "Clean the Dataset",
+  subtitle: "Real-world data is messy. Before analysis, it must be cleaned and prepared.",
 
-  tools: ["Python", "Pandas", "Jupyter Notebook", "Matplotlib"],
+  objective: "Identify issues in the retail dataset and clean the data so that it is ready for analysis.",
+
+  tools: ["Python", "Pandas", "Jupyter Notebook"],
 
   datasetName: "UCI Online Retail Dataset",
   datasetUrl: "https://archive.ics.uci.edu/ml/datasets/online+retail",
 
   steps: [
-    "Download the dataset and load it into a Jupyter Notebook using Pandas.",
-    "Use df.head() to inspect the first few rows.",
-    "Use df.info() to understand the columns and data types.",
-    "Use df.describe() to see basic statistics of numerical variables.",
-    "Identify which columns are categorical vs numerical.",
-    "Write down what each column likely represents in a retail business context."
+    "Load the dataset again in your notebook.",
+    "Check for missing values using df.isnull().sum().",
+    "Identify rows where important fields are missing.",
+    "Look for negative quantities or strange values.",
+    "Remove cancelled transactions if necessary (Invoice numbers starting with 'C').",
+    "Create a cleaned dataframe that removes invalid records.",
+    "Verify the dataset again using df.describe() and df.info()."
   ],
 
   expectedOutput: [
-    "A notebook where the dataset is successfully loaded",
-    "Basic dataset inspection outputs (head, info, describe)",
-    "A short description of each column",
-    "A brief note explaining what the dataset appears to represent"
+    "A cleaned dataframe without invalid rows",
+    "A notebook section explaining what cleaning steps were applied",
+    "Code cells showing how missing or incorrect values were handled",
+    "A dataset ready for exploratory analysis"
   ],
 
-  hint: "Good analysts always explore the dataset before cleaning or modelling. Look carefully at column names and data types.",
+  hint: "Retail datasets often contain cancelled orders and negative quantities. Look carefully for those patterns.",
 
-  professorTip: "Understanding the structure of a dataset often reveals problems before they become bugs later in the project.",
+  professorTip: "Data cleaning often takes more time than modelling. Good analysts document their cleaning steps clearly.",
 
-  reflection: "If you were presenting this dataset to a business manager, how would you explain what information it contains?",
+  reflection: "What types of problems did you find in the dataset? How might these errors affect business analysis if left untreated?",
 
   xpReward: 50,
 
-  message: "Day 2 already. Yesterday you understood the problem — today you meet the data. Data can look messy or confusing at first, but that is normal. Every analyst has the same moment of opening a dataset and thinking 'what on earth is going on here'. The fun part is slowly making sense of it. Just explore today, no pressure to solve everything.",
+  message: "You have now looked at the data and started understanding it. Today you do something every analyst must do — cleaning the data. This is not the glamorous part of analytics, but it is one of the most important parts. A model built on messy data is useless. Be patient with the process today.",
 
-  checkpoint: "Today is about curiosity. Just explore and understand the dataset.",
+  checkpoint: "Once the dataset is clean, the real analysis becomes much easier.",
 
-  reward: "Reward unlocked: You now get to choose the movie for our next movie night."
+  reward: "Reward unlocked: ONE SEXY ICECREAM ON ME!!!!"
 };
