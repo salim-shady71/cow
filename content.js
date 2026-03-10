@@ -31,46 +31,47 @@ const ACHIEVEMENTS = [
 
 // EDIT THIS OBJECT DAILY
 const CURRENT_DAY = {
-  day: 3,
+  day: 4,
   level: "Level 1 — The Data Detective",
-  title: "Clean the Dataset",
-  subtitle: "Real-world data is messy. Before analysis, it must be cleaned and prepared.",
+  title: "Explore the Business Story in the Data",
+  subtitle: "Now that the dataset is clean, it is time to uncover the first real patterns and insights.",
 
-  objective: "Identify issues in the retail dataset and clean the data so that it is ready for analysis.",
+  objective: "Use exploratory data analysis to understand product sales, order behaviour, and customer activity in the retail dataset.",
 
-  tools: ["Python", "Pandas", "Jupyter Notebook"],
+  tools: ["Python", "Pandas", "Matplotlib", "Seaborn", "Jupyter Notebook"],
 
   datasetName: "UCI Online Retail Dataset",
   datasetUrl: "https://archive.ics.uci.edu/ml/datasets/online+retail",
 
   steps: [
-    "Load the dataset again in your notebook.",
-    "Check for missing values using df.isnull().sum().",
-    "Identify rows where important fields are missing.",
-    "Look for negative quantities or strange values.",
-    "Remove cancelled transactions if necessary (Invoice numbers starting with 'C').",
-    "Create a cleaned dataframe that removes invalid records.",
-    "Verify the dataset again using df.describe() and df.info()."
+    "Load your cleaned dataset into the notebook.",
+    "Create a new column for total transaction value using Quantity × UnitPrice.",
+    "Find the top-selling products by quantity.",
+    "Find the highest-revenue products by total value.",
+    "Look at which countries generate the most revenue.",
+    "Plot at least three charts that help explain the business story in the data.",
+    "Write down three interesting observations from your analysis."
   ],
 
   expectedOutput: [
-    "A cleaned dataframe without invalid rows",
-    "A notebook section explaining what cleaning steps were applied",
-    "Code cells showing how missing or incorrect values were handled",
-    "A dataset ready for exploratory analysis"
+    "A notebook section for exploratory data analysis",
+    "A transaction value column added to the dataset",
+    "Tables showing top products and top countries",
+    "At least three charts with short written interpretations",
+    "Three business observations based on the data"
   ],
 
-  hint: "Retail datasets often contain cancelled orders and negative quantities. Look carefully for those patterns.",
+  hint: "Do not just make charts. Ask what each chart tells a manager about sales, products, or customers.",
 
-  professorTip: "Data cleaning often takes more time than modelling. Good analysts document their cleaning steps clearly.",
+  professorTip: "Exploratory analysis is where data starts becoming a story. The strongest analysts do not just describe charts — they explain why they matter.",
 
-  reflection: "What types of problems did you find in the dataset? How might these errors affect business analysis if left untreated?",
+  reflection: "Which finding today would be most useful to a retail manager trying to improve stock planning or sales strategy?",
 
   xpReward: 50,
 
-  message: "You have now looked at the data and started understanding it. Today you do something every analyst must do — cleaning the data. This is not the glamorous part of analytics, but it is one of the most important parts. A model built on messy data is useless. Be patient with the process today.",
+  message: "Today is where things start getting more fun. You are no longer just inspecting or cleaning the data — you are beginning to actually understand the business through it. This is the part where analysts start to feel the data come alive a little. Take your time with the charts and try to notice the small things.",
 
-  checkpoint: "Once the dataset is clean, the real analysis becomes much easier.",
+  checkpoint: "Today is about discovery. By the end of this quest, the dataset should start feeling less like random rows and more like a business story.",
 
-  reward: "Reward unlocked: ONE SEXY ICECREAM ON ME!!!!"
+  reward: "Reward unlocked: Visit room to collect your reward ASAP!"
 };
