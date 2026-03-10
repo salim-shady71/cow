@@ -31,32 +31,44 @@ const ACHIEVEMENTS = [
 
 // EDIT THIS OBJECT DAILY
 const CURRENT_DAY = {
-  day: 1,
+  day: 2,
   level: "Level 1 — The Data Detective",
-  title: "Understand the Business Problem",
-  subtitle: "Begin the quest by understanding the real retail challenge before touching the code.",
-  objective: "Frame the business problem clearly: why does the retailer struggle with stockouts and overstock, and what questions should the analysis answer?",
-  tools: ["Notebook / Notion", "Python", "Pandas"],
+  title: "Explore the Dataset",
+  subtitle: "Before analysing anything, you must understand what the data actually contains.",
+  objective: "Load the retail dataset into Python and explore its structure, variables, and basic statistics to understand what information is available.",
+
+  tools: ["Python", "Pandas", "Jupyter Notebook", "Matplotlib"],
+
   datasetName: "UCI Online Retail Dataset",
   datasetUrl: "https://archive.ics.uci.edu/ml/datasets/online+retail",
+
   steps: [
-    "Read the business scenario and write a 4-6 sentence problem statement in your own words.",
-    "Visit the dataset source and inspect what fields are available.",
-    "Write down 3-5 business questions this analysis should answer.",
-    "Open a notebook and create a small setup section with imports and a project title.",
-    "Create a short note on what success for this project would look like."
+    "Download the dataset and load it into a Jupyter Notebook using Pandas.",
+    "Use df.head() to inspect the first few rows.",
+    "Use df.info() to understand the columns and data types.",
+    "Use df.describe() to see basic statistics of numerical variables.",
+    "Identify which columns are categorical vs numerical.",
+    "Write down what each column likely represents in a retail business context."
   ],
+
   expectedOutput: [
-    "A short written problem statement",
-    "A list of business questions",
-    "A starter notebook with imports and project heading",
-    "A note describing what insights the company needs"
+    "A notebook where the dataset is successfully loaded",
+    "Basic dataset inspection outputs (head, info, describe)",
+    "A short description of each column",
+    "A brief note explaining what the dataset appears to represent"
   ],
-  hint: "Think like a manager, not just a coder. What decisions will this project help the business make?",
-  professorTip: "A project feels stronger in interviews when you can explain the business problem before you explain the code.",
-  reflection: "What would make this project feel useful to a real company instead of just looking like classwork?",
+
+  hint: "Good analysts always explore the dataset before cleaning or modelling. Look carefully at column names and data types.",
+
+  professorTip: "Understanding the structure of a dataset often reveals problems before they become bugs later in the project.",
+
+  reflection: "If you were presenting this dataset to a business manager, how would you explain what information it contains?",
+
   xpReward: 50,
-  message: "Hi, my dear kunji bb, lov u so much hug u so much. I wos think something like this would mek it more fun for u to learn these things, hence im try to make a game. I know the things u are capable of and I know there is a fear of not being good enough or something like that deep down that is causing u to maybe think like this, and I know u can overcome it with lil effort. This is to make learning this course lil fun for u. im make a cute lil carrot mascot for u and from now u shall coll him, Prof. Carrot coz he is here to help u learn these things, so it not seem like im try to teech u or anything. There are som rules, please don’t read ahead into the doc until and unless u are completed the previous level.",
-  checkpoint: "Today is about setting the tone. Slow, thoughtful work now will make every later step easier.",
-  reward: "Since u are done so well today and agreed to participate in this gem i am write this poem for u as reward. \n I am a wild dog hunting for my day to day food \n One day came a nightingale came in with its sweet voice and good mood, \n Taught me how to be a tamed domestic, \n without being too stochastic. \n I learnt a lot of wisdom from mama dog, \n but only applied it when u showed me the way, dawg. \n i have the pleasure of calling u my kunji, \n i hope i am keep u happy and safe and away from all the punjis."
+
+  message: "Day 2 already. Yesterday you understood the problem — today you meet the data. Data can look messy or confusing at first, but that is normal. Every analyst has the same moment of opening a dataset and thinking 'what on earth is going on here'. The fun part is slowly making sense of it. Just explore today, no pressure to solve everything.",
+
+  checkpoint: "Today is about curiosity. Just explore and understand the dataset.",
+
+  reward: "Reward unlocked: You now get to choose the movie for our next movie night."
 };
