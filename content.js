@@ -31,12 +31,12 @@ const ACHIEVEMENTS = [
 
 // EDIT THIS OBJECT DAILY
 const CURRENT_DAY = {
-  day: 4,
+  day: 5,
   level: "Level 1 — The Data Detective",
-  title: "Explore the Business Story in the Data",
-  subtitle: "Now that the dataset is clean, it is time to uncover the first real patterns and insights.",
+  title: "Discover Time Trends and Seasonality",
+  subtitle: "Retail businesses often follow strong time patterns. Your task today is to uncover them.",
 
-  objective: "Use exploratory data analysis to understand product sales, order behaviour, and customer activity in the retail dataset.",
+  objective: "Analyse how sales change over time and identify trends or seasonal patterns in the retail dataset.",
 
   tools: ["Python", "Pandas", "Matplotlib", "Seaborn", "Jupyter Notebook"],
 
@@ -44,34 +44,33 @@ const CURRENT_DAY = {
   datasetUrl: "https://archive.ics.uci.edu/ml/datasets/online+retail",
 
   steps: [
-    "Load your cleaned dataset into the notebook.",
-    "Create a new column for total transaction value using Quantity × UnitPrice.",
-    "Find the top-selling products by quantity.",
-    "Find the highest-revenue products by total value.",
-    "Look at which countries generate the most revenue.",
-    "Plot at least three charts that help explain the business story in the data.",
-    "Write down three interesting observations from your analysis."
+    "Ensure the InvoiceDate column is converted into a datetime format.",
+    "Create new columns for Month and Year from the date field.",
+    "Calculate total sales per month using the transaction value column created earlier.",
+    "Plot a chart showing sales over time.",
+    "Look for patterns such as peaks or dips in certain months.",
+    "Identify whether the dataset shows any seasonal behaviour.",
+    "Write a short explanation of what the time trend suggests about the business."
   ],
 
   expectedOutput: [
-    "A notebook section for exploratory data analysis",
-    "A transaction value column added to the dataset",
-    "Tables showing top products and top countries",
-    "At least three charts with short written interpretations",
-    "Three business observations based on the data"
+    "A notebook section analysing sales over time",
+    "Monthly sales aggregation table",
+    "A line chart showing sales trends over time",
+    "Written explanation of any patterns or seasonality discovered"
   ],
 
-  hint: "Do not just make charts. Ask what each chart tells a manager about sales, products, or customers.",
+  hint: "Retail businesses often see strong spikes around holidays or specific seasons. Look carefully at the monthly trend.",
 
-  professorTip: "Exploratory analysis is where data starts becoming a story. The strongest analysts do not just describe charts — they explain why they matter.",
+  professorTip: "Time analysis is extremely powerful in business analytics. Trends and seasonality help companies plan inventory, staffing, and marketing.",
 
-  reflection: "Which finding today would be most useful to a retail manager trying to improve stock planning or sales strategy?",
+  reflection: "If you were managing this retail company, how would the sales trends influence inventory or marketing decisions?",
 
   xpReward: 50,
 
-  message: "Today is where things start getting more fun. You are no longer just inspecting or cleaning the data — you are beginning to actually understand the business through it. This is the part where analysts start to feel the data come alive a little. Take your time with the charts and try to notice the small things.",
+  message: "You have now cleaned the data and started understanding products and customers. Today you look at something very important in retail — time. Businesses often rise and fall with seasons, holidays, and buying patterns. Today you are trying to see whether the data reveals those rhythms.",
 
-  checkpoint: "Today is about discovery. By the end of this quest, the dataset should start feeling less like random rows and more like a business story.",
+  checkpoint: "Once you understand time patterns, you are much closer to understanding how the business actually operates.",
 
-  reward: "Reward unlocked: Visit room to collect your reward ASAP!"
+  reward: "Reward unlocked: You choose the dessert the next time we eat out."
 };
