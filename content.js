@@ -72,5 +72,5 @@ const CURRENT_DAY = {
 
   checkpoint: "Once you understand time patterns, you are much closer to understanding how the business actually operates.",
 
-  reward: "Reward unlocked: You choose the dessert the next time we eat out."
+  reward: "Reward unlocked: Collect your reward (V-Bucks)!"
 };
