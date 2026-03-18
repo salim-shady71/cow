@@ -31,46 +31,46 @@ const ACHIEVEMENTS = [
 
 // EDIT THIS OBJECT DAILY
 const CURRENT_DAY = {
-  day: 5,
-  level: "Level 1 — The Data Detective",
-  title: "Discover Time Trends and Seasonality",
-  subtitle: "Retail businesses often follow strong time patterns. Your task today is to uncover them.",
+  day: 8,
+  level: "Level 2 — Customer Intelligence",
+  title: "Frame the Segmentation Strategy",
+  subtitle: "You are no longer just analysing data. You are designing how a business understands its customers.",
 
-  objective: "Analyse how sales change over time and identify trends or seasonal patterns in the retail dataset.",
+  objective: "Define what customer segmentation means for this business and establish the foundation for your analysis.",
 
-  tools: ["Python", "Pandas", "Matplotlib", "Seaborn", "Jupyter Notebook"],
+  tools: ["Notebook / Notion", "Python (optional)"],
 
-  datasetName: "UCI Online Retail Dataset",
-  datasetUrl: "https://archive.ics.uci.edu/ml/datasets/online+retail",
+  datasetName: "Mall Customer Segmentation Dataset",
+  datasetUrl: "https://www.kaggle.com/datasets/vjchoudhary7/customer-segmentation-tutorial",
 
   steps: [
-    "Ensure the InvoiceDate column is converted into a datetime format.",
-    "Create new columns for Month and Year from the date field.",
-    "Calculate total sales per month using the transaction value column created earlier.",
-    "Plot a chart showing sales over time.",
-    "Look for patterns such as peaks or dips in certain months.",
-    "Identify whether the dataset shows any seasonal behaviour.",
-    "Write a short explanation of what the time trend suggests about the business."
+    "Write a clear definition of customer segmentation in your own words.",
+    "Identify 3–5 business goals that segmentation should achieve.",
+    "Define what makes a 'useful' customer segment from a business perspective.",
+    "Explore the dataset and list its limitations.",
+    "Write down what data is missing and what you wish you had.",
+    "Document everything clearly as if presenting to a business stakeholder."
   ],
 
   expectedOutput: [
-    "A notebook section analysing sales over time",
-    "Monthly sales aggregation table",
-    "A line chart showing sales trends over time",
-    "Written explanation of any patterns or seasonality discovered"
+    "Written segmentation strategy",
+    "List of business goals",
+    "Definition of useful segments",
+    "Dataset limitations and missing data",
+    "Structured notes ready for GitHub"
   ],
 
-  hint: "Retail businesses often see strong spikes around holidays or specific seasons. Look carefully at the monthly trend.",
+  hint: "Do not think like a student. Think like someone hired to solve a business problem.",
 
-  professorTip: "Time analysis is extremely powerful in business analytics. Trends and seasonality help companies plan inventory, staffing, and marketing.",
+  professorTip: "Strong analysts define the problem clearly before touching the data. This is what separates good work from great work.",
 
-  reflection: "If you were managing this retail company, how would the sales trends influence inventory or marketing decisions?",
+  reflection: "If you presented this to a company, would they feel confident in your approach?",
 
-  xpReward: 50,
+  xpReward: 75,
 
-  message: "You have now cleaned the data and started understanding products and customers. Today you look at something very important in retail — time. Businesses often rise and fall with seasons, holidays, and buying patterns. Today you are trying to see whether the data reveals those rhythms.",
+  message: "Welcome to Level 2. Things are a little different now. You are not just completing tasks anymore — you are making decisions. This level is about thinking like an analyst, not just acting like one. Take your time today. There is no rush.",
 
-  checkpoint: "Once you understand time patterns, you are much closer to understanding how the business actually operates.",
+  checkpoint: "You should now have a clear understanding of what segmentation means for this business before moving into modelling.",
 
-  reward: "Reward unlocked: Collect your reward (V-Bucks)!"
+  reward: "Collect new VBUCK of ur choice!"
 };
